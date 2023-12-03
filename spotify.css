@@ -245,10 +245,16 @@ a{
     border-radius: 0.4rem;
 }
 
+.start-pos{
+    display: flex;
+    align-items: center;
+}
+
 .song-name{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 0 0.4rem 0 0.4rem;
     padding: 0 0.6rem 0 0.6rem;
 }
@@ -319,3 +325,102 @@ a{
     font-size: 1.25rem;
     font-weight: 500;
 }
+
+.play-button{
+    display: none;
+}
+
+.mag-search{
+    display: none;
+}
+
+
+/* ... (Existing styles) ... */
+
+/* Hide Sidebar and Add Search Button for Devices Less Than 800px */
+@media (max-width: 750px) {
+    .side_bar {
+        display: none; /* Hide the sidebar on small screens */
+    }
+
+    .main-content {
+        width: 100%; /* Occupy full width when the sidebar is hidden */
+    }
+
+    .search-button {
+        display: block; /* Display the search button */
+        background-color: #121212;
+        padding: 0.75rem;
+        text-align: center;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Adjust main content padding when sidebar is hidden */
+    .main-content {
+        padding: 0.75rem;
+    }
+
+    .control-player{
+        display: none;
+    }
+
+    .playback-bar{
+        display: none;
+    }
+
+    .display-view{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .view{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .view img{
+        width: 60px;
+        height: 65px;
+        padding: 0.25rem;
+        border: 0.5rem;
+        border-radius: 10%;
+    }
+
+    .play-button{
+        display: block;
+        font-size: 1.75rem;
+    }
+
+    .end-pos{
+        display: flex;
+        align-items: center;
+    }
+
+    .end-pos i{
+        padding: 0.5rem;
+        border-left: 2rem;
+        margin-left: 1rem;
+    }
+
+    .start-pos{
+        display: flex;
+        align-items: center;
+    }
+
+    .mag-search{
+        display: inline-flex;
+        padding: 0.5rem;
+        border: 0.25rem;
+        justify-content: center;
+    }
+
+}
+
+   
+
+
+    
